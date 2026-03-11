@@ -1,0 +1,45 @@
+site_name: My Docs
+
+theme:
+  name: material
+
+  features:
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+    - content.tabs.link
+
+nav:
+  - Home: index.md
+  - Development:
+      - Git: dev/git.md
+      - How To: dev/howto.md
+  - Hacking:
+      - Utilities: hacking/utils.md
+  - Software Reverse Engineering:
+      - Cheat Sheet: sre/cheat-sheet.md
+  - System Administration:
+      - Apache: sysadmin/apache.md
+      - Cowrie: sysadmin/cowrie.md
+      - Encrypted Filesystem: sysadmin/enc-luks-fs.md
+      - Iptables: sysadmin/iptables.md
+      - SSH Server: sysadmin/ssh-server.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.details
+
+plugins:
+  - search:
+      lang: en
+
