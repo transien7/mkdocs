@@ -1,0 +1,27 @@
+site_name: My Docs
+
+theme:
+  name: material
+
+  features:
+    - navigation.sections
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+    - content.tabs.link
+
+markdown_extensions:
+  - toc
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+
+plugins:
+  - search:
+      lang: en
+  - mermaid2
+  - awesome-pages
+
