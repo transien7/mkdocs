@@ -1,18 +1,19 @@
-# MkDocs with Mermaid support using Mermaid2 Plugin
-This configuration supports Mermaid diagrams via the Mermaid2 plugin
+# MkDocs with Mermaid2 Plugin and Dark Mode
+This sample extends the mermaid2 plugin configuration by adding support to toggle dark mode on or off. This works out of the box with mkdocs-material provided the below palette options are included in `mkdocs.yml`.
+```yaml title="mkdocs.yml"
+theme:
+  name: material
+  palette: 
 
-This is achieved through the below configuration:
-```text {title="requirements.txt"
-mkdocs-mermaid2-plugin==1.1.1
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 ```
-Note that the below superfences is still required to treat the code block as a mermaid diagram
-```yaml {title="mkdocs.yml"}
-markdown_extensions:
-  - toc
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:mermaid2.fence_mermaid_custom
-``` 
-

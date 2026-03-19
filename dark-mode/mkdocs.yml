@@ -4,14 +4,14 @@ theme:
   name: material
   palette:
     - scheme: default
-      primary: deep purple
-      accent: teal
+      primary: indigo
+      accent: cyan
       toggle:
         icon: material/brightness-7 
         name: Switch to dark mode
     - scheme: slate
-      primary: purple
-      accent: cyan
+      primary: pink
+      accent: orange
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -22,6 +22,13 @@ theme:
     - content.code.copy
     - content.action.edit
     - content.tabs.link
+
+nav:
+  - Home: index.md
+  - Mermaid examples:
+    - Network graph: mermaid-examples/network-graph.md
+    #- Network diagram: mermaid-examples/network-diagram.md
+    - Sequence diagram: mermaid-examples/sequence-diagram.md
 
 markdown_extensions:
   - toc
@@ -35,5 +42,3 @@ plugins:
   - search:
       lang: en
   - mermaid2
-  - awesome-pages
-

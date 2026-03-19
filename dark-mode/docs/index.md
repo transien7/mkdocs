@@ -17,12 +17,3 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 ```
-
-## Sequence diagram
-```mermaid
-sequenceDiagram
-  Server->>Client:  send_message(msg)
-  Client-->>Client: process_message(msg)
-  Client-->>Server: send_response()
-```
-
