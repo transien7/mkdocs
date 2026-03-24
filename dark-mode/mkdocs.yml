@@ -17,18 +17,27 @@ theme:
         name: Switch to light mode
   features:
     - navigation.sections
+    - navigation.expand
+    #- navigation.tabs
     - search.highlight
     - search.suggest
     - content.code.copy
     - content.action.edit
     - content.tabs.link
+    - toc.follow
 
 nav:
   - Home: index.md
-  - Mermaid examples:
-    - Network graph: mermaid-examples/network-graph.md
-    #- Network diagram: mermaid-examples/network-diagram.md
-    - Sequence diagram: mermaid-examples/sequence-diagram.md
+  - Getting started:
+      - Setting up your development environment: getting-started/dev-environment.md
+      - Project structure: getting-started/project-structure.md
+  - Contributing:
+      - Workflow: contributing/workflow.md
+      - Style guide: contributing/style-guide.md
+  - Guides:
+      - Creating network diagrams with graphs: guides/network-graph.md
+      - Creating network diagrams with architecture diagrams: guides/network-architecture.md
+      - Creating sequence diagrams: guides/sequence-diagram.md
 
 markdown_extensions:
   - toc
@@ -36,9 +45,11 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:mermaid2.fence_mermaid_custom
+          # format: !!python/name:mermaid2.fence_mermaid_custom
+          format: !!python/name:mermaid2.fence_mermaid
 
 plugins:
   - search:
       lang: en
-  - mermaid2
+  - mermaid2:
+      version: 11.1.0  # min version for architecture diagrams

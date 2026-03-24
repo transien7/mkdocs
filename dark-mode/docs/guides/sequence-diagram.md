@@ -2,7 +2,7 @@
 icon: 
 ---
 
-# Sequence diagram
+# Creating sequence diagrams
 
 ```
 sequenceDiagram

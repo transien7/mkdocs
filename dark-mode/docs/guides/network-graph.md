@@ -1,4 +1,4 @@
-# Network diagram using graph
+# Creating network diagrams using graphs
 
 ## Simple setup
 ```
